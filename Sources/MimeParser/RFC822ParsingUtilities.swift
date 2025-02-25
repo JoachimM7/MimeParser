@@ -25,7 +25,7 @@ struct RFC822HeaderFieldsUnfolder {
     
     func unfold(in string: String) -> String {
         let regex = try! NSRegularExpression(pattern: "\r?\n[[:blank:]]+", options: [])
-        let result = regex.stringByReplacingMatches(in: string, options: [], range: string.nsRange, withTemplate: " ")
+        let result = regex.stringByReplacingMatches(in: string, options: [], range: string.nsRange, withTemplate: "")
         return result
     }
 }
